@@ -1,24 +1,35 @@
 body{
-    background: #333;
+    background: url(../assets/img/Light.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav.navbar-transparent{
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #2f4fe2;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #1b1c19;
+}
+
+i.fa-solid.fa-home::before{
+    color: #2f4fe2;
+}
+
+.divisor {
+    width: 1px;
+    background: #fff;
+    margin: 10px 12px;
 }
 
 #store{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-nav.navbar-blue{
-    padding: 10px 0;
-    background: rgb(10, 10, 83);
-}
-
-.navbar-light .navbar-nav .nav-link{
-    color: #fff;
-}
-
-.navbar-light .navbar-nav .nav-link:hover{
-    color: rgb(141, 81, 253);
-    transition: 0.8s;
+    margin-top: 70px;
 }

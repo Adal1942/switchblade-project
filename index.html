@@ -18,15 +18,15 @@
   <body>
 
         <header>
-            <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-blue">
+            <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparent">
                 <div class="container">
 
                     <a href="./index.html" class="navbar-brand">
-                        <i class="fa-solid fa-home text-white"></i>
+                        <i class="fa-solid fa-home"></i>
                     </a>
 
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-main">
-                        <i class="fa-solid fa-sliders text-white"></i>
+                        <i class="fa-solid fa-sliders"></i>
                     </button>
 
                     <div class="collapse navbar-collapse" id="nav-main">
@@ -34,23 +34,29 @@
                         <ul class="navbar-nav ml-auto">
                             
                             <li class="nav-item">
-                                <a href="" class="nav-link">Ainda</a>
+                                <a href="./index.html" class="nav-link active">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" class="nav-link">Estamos</a>
+                                <a href="" class="nav-link">Categorias</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" class="nav-link">Em</a>
+                                <a href="" class="nav-link">Contatos</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" class="nav-link">Construção</a>
+                                <a href="" class="nav-link">Cadastre-se</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" class="nav-link">Belezura</a>
+                                <a href="" class="nav-link">Entrar</a>
+                            </li>
+
+                            <li class="nav-item divisor"></li>
+
+                            <li class="nav-item">
+                                <i class="fa-solid fa-sun" onclick="toggleSwitch()"></i>
                             </li>
                         </ul>
 
@@ -63,14 +69,18 @@
         <section id="store">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="./assets/img/spin.png" style="display: flex;justify-content: center;align-items: center;width: 350px;" alt=""><br>
-                        <a href="./pages/spin.html">Ver mais</a>
+                    <div class="col-md-6 d-flex">
+                        <div class="align-self-center">
+                            <img src="./assets/img/spin.png" width="350" alt=""><br>
+                            <a href="./pages/spin.html">Ver mais</a>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="./assets/img/carregando.png" alt=""><br>
-                        <a href="">Ver mais</a>
-                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="align-self-center">
+                            <img src="./assets/img/carregando.png" width="350" alt=""><br>
+                            <a href="">Ver mais</a>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </section>
@@ -80,5 +90,27 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="./assets/bootstrap4/js/bootstrap.min.js"></script>
+    <script>
+        let switchStatus = "off", 
+        body = document.querySelector('body'),
+        text = document.querySelector('.navbar-light .navbar-nav .nav-link'),
+        textHover = document.querySelector('.navbar-light .navbar-nav .nav-link:hover');
+
+        function toggleSwitch(){
+            if (switchStatus == "off"){
+                body.style.backgroundImage = "url(./assets/img/dark.png)";
+                body.style.backgroundAttachment = "fixed";
+                body.style.backgroundSize = "cover";
+
+                switchStatus = "on";
+            } else if(switchStatus == "on"){
+                body.style.backgroundImage = "url(./assets/img/Light.png)";
+                body.style.backgroundAttachment = "fixed";
+                body.style.backgroundSize = "cover";
+                
+                switchStatus = "off";
+            }
+        }
+    </script>
   </body>
 </html>
