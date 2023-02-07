@@ -11,7 +11,7 @@ let switchStatus = "off",
 
                 switchStatus = "on";
             } else if(switchStatus == "on"){
-                body.style.backgroundImage = "url(../assets/img/Light.png)";
+                body.style.backgroundImage = "url(../assets/img/light.png)";
                 body.style.backgroundAttachment = "fixed";
                 body.style.backgroundSize = "cover";
                 
