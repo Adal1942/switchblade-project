@@ -1,0 +1,40 @@
+svg{
+    max-width: 30em;
+    stroke: #222;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 5%;
+    margin-top: 150px;
+}
+
+svg use{
+    stroke: #00BFFF;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    to{
+        stroke-dashoffset: 10px;
+    }
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.icon{
+    text-align: center;
+}
+
+.icon h2{
+    position: relative;
+    color: #111;
+    font-size: 2em;
+    font-weight: normal;
+    text-shadow: 0 10px 10px rgb(66, 66, 66);
+    box-shadow: 10px 0 0 #222;
+}
