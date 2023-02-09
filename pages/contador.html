@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap4/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../assets/icon/fontawesome/css/all.css">
+
+    <title>contador</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contador.css">
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparent">
+            <div class="container">
+
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/img/logo.png" width="42" alt="">
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-main">
+                    <i class="fa-solid fa-sliders"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-main">
+
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Categorias</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Contatos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Cadastre-se</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Entrar</a>
+                        </li>
+
+                        <li class="nav-item divisor"></li>
+
+                        <li class="nav-item">
+                            <i class="fa-solid fa-sun" onclick="toggleSwitch()"></i>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="count">
+        <div class="fundo">
+            <h1>Contador</h1>
+            <p>Clique nos botões para alterar o valor.</p>
+            
+            <div id="counter">
+                <button name="subtrair" onclick="decrement()"><i class="fa-solid fa-minus"></i></button>
+                <span id="currentNumber">0</span>
+                <button name="adicionar" onclick="increment()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="../assets/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="../js/toggle.js"></script>
+    <script>
+        var currentNumberWrapper = document.getElementById('currentNumber')
+        var currentNumber = 0;
+
+        function increment() {
+            currentNumber = currentNumber + 1;
+            currentNumberWrapper.innerHTML = currentNumber;
+        }
+        function decrement() {
+            currentNumber = currentNumber - 1;
+            currentNumberWrapper.innerHTML = currentNumber;
+        }
+    </script>
+  </body>
+</html>

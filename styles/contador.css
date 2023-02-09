@@ -1,0 +1,46 @@
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.count .fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3%;
+    background: #f2f3f5;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    color: #56baed;
+    width: 300px;
+    height: 300px;
+}
+
+.count .fundo h1{
+    font-size: 3em;
+}
+
+#counter{
+    display: flex;
+}
+
+#counter button{
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+    border: 2px solid #56baed;
+    color: #56baed;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#currentNumber{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-size: 1.5em;
+}
